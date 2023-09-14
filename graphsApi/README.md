@@ -7,7 +7,7 @@ API desenvolvida para lidar com grafos.
 [] Implementar uma API para grafos
 [] Ler um grafo a partir de um texto, no formato:
 
-```
+```txt
 	|n              | n = quantidade de vértices
 	|m              | m = quantidade de arestas
 	|a1 b1          | (em m linhas)
