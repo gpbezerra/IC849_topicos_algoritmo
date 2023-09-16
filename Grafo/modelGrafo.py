@@ -38,3 +38,40 @@ class Graph:
     new_node = Node(node) # aqui estamos instânciando um node
     self.vert_dict[node] = new_node
     return new_node
+  
+  def get_node(self, n):
+    if n in self.vert_dict:
+      return self.vert_dict[n]
+    else:
+      return None
+    
+  def add_edge(self, frm, to, cost = 0):
+    if frm not in self.vert_dict:
+      self.add_node(frm)
+    if to not in self.vert_dict:
+      self.add_node(to)
+
+    self.vert_dict[frm].add_neighbor(self.vert_dict[to], cost) 
+    self.vert_dict[to].add_neighbor(self.vert_dict[to], cost)
+
+  def get_vertices(self):
+    return self.vert_dict.keys()
+
+if __name__ ==  "__main__":
+
+  g = Graph()
+  g.add_node('a')
+  g.add_node('c')
+  g.add_edge('a', 'b', 7)
+  g.add_edge('c', 'b', 2)
+  g.add_edge('c', 'a', 3)
+
+  for v in g:
+    for w in v.get_connections():
+        vid= v.get_id()
+        wid = w.get_id()
+        print ( vid, wid, v.get_weight(w))
+
+  
+for v in g:
+  print (v.get_id(), g.vert_dict[v.get_id()])
