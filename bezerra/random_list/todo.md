@@ -1,0 +1,3 @@
+- Gerar um vetor aleatório com o máximo de elementos possível
+- Armazenar em disco
+- Colocar esse valores em uma árvore binária
