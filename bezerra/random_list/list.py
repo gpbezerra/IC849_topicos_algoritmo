@@ -2,7 +2,7 @@ import numpy as np
 import csv
 
 # Gerando um vetor aleatório com 1 milhão de elementos
-num_elements = 1000000 
+num_elements = 1000000
 random_vec = np.random.uniform(0, 100, num_elements) # Irá gerar numeros aleatórios no range de 0 - 100
 
 file_name = "random_vector.csv"
@@ -51,5 +51,6 @@ class BinaryTree:
 binary_tree = BinaryTree()
 
 # Inserindo os valores na árvore binária
-for value in random_vec:
-    binary_tree.insert(value)
+# for value in random_vec:
+#     binary_tree.insert(value)
+[binary_tree.insert(value) for value in random_vec]
