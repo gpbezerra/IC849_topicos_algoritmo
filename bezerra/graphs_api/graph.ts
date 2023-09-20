@@ -39,6 +39,7 @@ class Graph {
     }
 
     public addNode(node: Vertex): boolean{
+
         // Verficando se ele já existe
         if(this.nodes.find(element => element.id == node.id)) {
             return true;
@@ -50,7 +51,6 @@ class Graph {
     public addEdge(node1: Vertex, node2: Vertex){
         
         // Repensar numa forma melhor de verficar e atribuir direto os vertices adjacente de cada vertice
-        
         
         if(this.nodes.find(element => element.id == node1.id)) {
 
@@ -72,6 +72,14 @@ class Graph {
             }
         }
 
+    }
+
+    public removeNode(node: Vertex): Vertex[]{
+        this.nodes = this.nodes.filter(element => element.id != node.id)
+        return this.nodes;
+    } 
+
+    public removeEdge(node1: Vertex, node2: Vertex){
     }
 }
 
