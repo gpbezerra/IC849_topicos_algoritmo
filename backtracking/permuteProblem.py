@@ -1,7 +1,7 @@
-
 # as entradas de nossa função é list(o quanto valores cada permutação conterá) ex: list= 1 e s = ["a", "b", "c"]
 # teremos como saída nesse caso = ["a", "b", "c"], caso list = 2 seria ['aa', 'ab', 'ac', 'ba', 'bb', 'bc', 'ca', 'cb', 'cc']
 # ou seja definimos a quantidade de valores em cada permutação em "list" e nossos valores trabalhados em "s"
+#https://www.tutorialspoint.com/python_data_structure/python_backtracking.htm
 
 def permute(list, s):
   # caso o número de combinações seja 1, retornamos a própria lista
